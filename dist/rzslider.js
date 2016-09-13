@@ -2186,4 +2186,4 @@
 }]);
 
   return module.name
-}));
+});

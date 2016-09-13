@@ -4,24 +4,16 @@
  2016-09-06 */
 /*jslint unparam: true */
 /*global angular: false, console: false, define, module */
-(function(root, factory) {
-  'use strict';
-  /* istanbul ignore next */
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['angular'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like environments that support module.exports,
-    // like Node.
-    // to support bundler like browserify
-    module.exports = factory(require('angular'));
-  } else {
-    // Browser globals (root is window)
-    factory(root.angular);
-  }
-
-}(this, function(angular) {
+(function webpackUniversalModuleDefinition(root, factory) {
+    if(typeof exports === 'object' && typeof module === 'object')
+        module.exports = factory();
+    else if(typeof define === 'function' && define.amd)
+        define([], factory);
+    else if(typeof exports === 'object')
+        exports["angularjs-slider"] = factory();
+    else
+        root["angularjs-slider"] = factory();
+})(this, function() {
   'use strict';
   var module = angular.module('rzModule', [])
 
